@@ -6,7 +6,7 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-13
+ * date  2020-02-15
 */
 
 #ifndef _VoltSensor_H_
