@@ -14,5 +14,19 @@
 
 #include "Arduino.h"
 
+class VoltSensor {
+	public :
+		voltSensor(int pin, double r1 = 30000.0, double r2 = 7200.0);
+		void printVoltage(char lastChr = '\n');
+		double readVoltage();
+	private :
+		int _pin;
+		double _voltage;
+		double _res1;
+		double _res2;
+		double _analogRes = 1024.0;
+		double multiple =  5.0;
+};
+
 
 #endif
