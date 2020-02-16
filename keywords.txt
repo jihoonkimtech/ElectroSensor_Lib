@@ -12,7 +12,8 @@ VoltSensor	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-
+printVoltage	KEYWORD2
+readVoltage	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
