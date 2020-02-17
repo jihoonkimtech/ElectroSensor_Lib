@@ -6,7 +6,7 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-15
+ * date  2020-02-22
 */
 
 #ifndef _VoltSensor_H_
@@ -25,7 +25,7 @@ class VoltSensor {
 		double _res1;
 		double _res2;
 		double _analogRes = 1024.0;
-		double multiple =  5.0;
+		double _multiple =  5.0;
 };
 
 
