@@ -1,17 +1,18 @@
 /*
- * -Voltage Sensing Library-
+ * -Electric Sensing Library-
  *
- * this cpp file for Voltage Sensing Library
+ * this cpp file for Electric Sensing Library
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-18
+ * date  2020-02-19
 */
 
-#include "VoltSensor.h"
+#include "ElectroSensor.h"
 
-VoltSensor::VoltSensor(int pin, double r1 = 30000.0, double r2 = 7200.0){
+
+VoltSensor::ElectroSensor(int type, int pin, double r1 = 30000.0, double r2 = 7200.0){
 	_pin = pin;
 	_res1 = r1;
 	_res2 = r2;

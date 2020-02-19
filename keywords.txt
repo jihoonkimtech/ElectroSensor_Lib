@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-VoltSensor	KEYWORD1
+ElectroSensor	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -18,5 +18,6 @@ readVoltage	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
-
+CURRENT	LITERAL1
+VOLTAGE	LITERAL1
 

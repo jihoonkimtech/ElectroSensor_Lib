@@ -1,22 +1,24 @@
 /*
- * -Voltage Sensing Library-
+ * -Electric Sensing Library-
  *
- * this header file for Voltage Sensing Library
+ * this header file for Electric Sensing Library
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-18
+ * date  2020-02-19
 */
 
-#ifndef _VoltSensor_H_
-#define _VoltSensor_H_
+#ifndef _ElectroSensor_H_
+#define _ElectroSensor_H_
 
 #include "Arduino.h"
 
-class VoltSensor {
+enum sensType { CURRENT, VOLTAGE };
+
+class ElectroSensor {
 	public :
-		voltSensor(int pin, double r1 = 30000.0, double r2 = 7200.0);
+		ElectroSensor(int pin, double r1 = 30000.0, double r2 = 7200.0);
 		void printVoltage(char lastChr = '\n');
 		double readVoltage();
 	private :
