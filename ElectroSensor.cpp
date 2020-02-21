@@ -6,16 +6,17 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-20
+ * date  2020-02-21
 */
 
 #include "ElectroSensor.h"
 
 
-VoltSensor::ElectroSensor(int type, int pin, double r1 = 30000.0, double r2 = 7200.0){
+VoltSensor::ElectroSensor(int type, int pin){
 	_pin = pin;
-	_res1 = r1;
-	_res2 = r2;
+	_type = type;
+	
+	pinMode(_pin, INPUT);
 } 
 
 VoltSensor::readVoltage(){

@@ -6,7 +6,7 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V1.0.0
- * date  2020-02-20
+ * date  2020-02-21
 */
 
 #ifndef _ElectroSensor_H_
@@ -18,7 +18,7 @@ enum sensType { CURRENT, VOLTAGE };
 
 class ElectroSensor {
 	public :
-		ElectroSensor(int pin, double r1 = 30000.0, double r2 = 7500.0);
+		ElectroSensor(int type, int pin);
 		void printVoltage(char lastChr = '\n');
 		double readVoltage();
 		
