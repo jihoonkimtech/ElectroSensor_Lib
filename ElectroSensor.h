@@ -15,15 +15,16 @@
 #include "Arduino.h"
 
 enum sensType { CURRENT, VOLTAGE };
+enum unitType { MILLI, NORMAL, KILO };
 
 class ElectroSensor {
 	public :
 		ElectroSensor(int type, int pin);
 		void printVoltage(char lastChr = '\n');
-		double readVoltage();
+		double readVoltage(int unit = NORMAL);
 		
 		void printCurrent(char lastChr = '\n');
-		double readCurrent();
+		double readCurrent(int unit = NORMAL);
 	private :
 		int _pin;
 		double _voltage;

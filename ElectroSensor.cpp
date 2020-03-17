@@ -19,13 +19,18 @@ VoltSensor::ElectroSensor(int type, int pin){
 	pinMode(_pin, INPUT);
 } 
 
-VoltSensor::readVoltage(){
+VoltSensor::readVoltage(int unit = NORMAL){
 	
 	double analogInTmp = analogRead(_pin);
   	double voltTmp = (analogInTmp * _multiple) / _analogRes;
   	_voltage = voltTmp / (_res2/(_res1+_res2));
   
-	return _voltage;
+	if(NORMAL)
+		return _voltage;
+	else if(MILLI)
+		return _voltage/1000.0;
+	else if(KILO)
+		_voltage*1000.0;
 }
 
 VoltSensor::printVoltage(char lastChr = '\n'){
@@ -36,13 +41,18 @@ VoltSensor::printVoltage(char lastChr = '\n'){
 	Serial.print(lastChr);
 }
 
-VoltSensor::readCurrent(){
+VoltSensor::readCurrent(int unit = NORMAL){
 	
 	double analogInTmp = analogRead(_pin);
   	double voltTmp = (analogInTmp - 511) * 5 / 1024;
   	_current = voltTmp / 0.185;
-  
-	return _current;
+	
+	if(NORMAL)
+		return _current;
+	else if(MILLI)
+		return _current/1000.0;
+	else if(KILO)
+		_current*1000.0;
 }
 
 VoltSensor::printCurrent(char lastChr = '\n'){
