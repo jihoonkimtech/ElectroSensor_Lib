@@ -33,7 +33,7 @@ class ElectroSensor {
 		double _res2;
 		double _analogRes = 1024.0;
 		double _multiple =  5.0;
-		double _ curChange = 0.185;
+		double _curChange = 0.185;
 };
 
 
