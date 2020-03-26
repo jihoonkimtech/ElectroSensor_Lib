@@ -5,8 +5,7 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V1.0.0
- * date  2020-02-21
+ * version  V0.0.1
 */
 
 #include "ElectroSensor.h"
